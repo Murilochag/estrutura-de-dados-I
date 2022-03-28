@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curiosidade</title>
+</head>
+<body>
+    <h1>curiosidade</h1>
+    <button onclick="imprimir()">me aperte</button>
+</body>
+<script>
+    var frase = document.querySelector('h1');
+
+// imprimir curiosidade aleatótia sobre star wars
+function imprimir() {
+
+   function sorteio() {
+     return Math.random() * (6 - 1) + 1;
+    }
+
+    const A = parseInt(sorteio())
+    console.log(A)
+
+    if( A === 1) {frase.innerHTML = "1"}
+    if( A === 2) {frase.innerHTML = "2"}
+    if( A === 3) {frase.innerHTML = "3"}
+    if( A === 4) {frase.innerHTML = "4"}
+    if( A === 5) {frase.innerHTML = "5"}
+}
+</script>
+</html>
