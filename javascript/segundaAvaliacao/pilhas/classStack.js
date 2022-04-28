@@ -1,4 +1,5 @@
-export default class Stack {
+//export default 
+class Stack {
     constructor() {
         this.count = 0;
         this.items = {};
@@ -46,3 +47,16 @@ export default class Stack {
         return objString;
     }
 }
+
+var pilha = new Stack()
+
+pilha.push(1)
+pilha.push(2)
+pilha.push(3)
+
+console.log(pilha)
+
+pilha.pop()
+
+console.log(pilha)
+
