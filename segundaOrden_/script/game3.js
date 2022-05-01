@@ -37,18 +37,23 @@ class Stack {
   }
 //////////////////////////////////////////////////////////////////////
 
-const arrmemoria = [1,2,3,4,5,6,7,8,9]
+const arrmemoria = ['a','b','c','d','e','f','g','h','i','j']
 const arrtexte = new Stack
+const pilha2 = new Stack
 
 function sorteio(tamanho) {
     return parseInt(Math.random() * (tamanho - 1) + 1)
    }
 function empilharArr(arr) {
-    return arr[0] + '<br>' + arr[1] + '<br>' + arr[2] + '<br>' + arr[3] + '<br>' + arr[4] 
+    return arr[4] + '<br>' + arr[3] + '<br>' + arr[2] + '<br>' + arr[1] + '<br>' + arr[0] 
+}
+function esconderPilha() {
+  document.getElementById('array').innerHTML = ''
 }
 
 function sortearMemoria() {
     arrtexte.clear()
+    pilha2.clear()
     for(let i = 0; i < 5; i++) {
         j = sorteio(arrmemoria.length)
         arrtexte.push(arrmemoria[j])
@@ -57,19 +62,26 @@ function sortearMemoria() {
     }
 
 function verificarTopo() {
-    
-    if(imput === arrtexte.toArray()[arrtexte.size() - 1]){
-        arrtexte.pop()
-        return console.log('tudo certo!!!') //arrtexte.pop
+  esconderPilha()
+  var captarpilha = document.getElementById('captarpilha').value
+  if(captarpilha === arrtexte.peek()){
+    arrtexte.pop()
+    pilha2.push(captarpilha)
+    document.getElementById('array').innerHTML =
+    document.getElementById('mensagem').innerHTML = 'patabens'
+    document.getElementById("resultadoPilha").innerHTML = empilharArr(pilha2.toArray())
     }
-}
+    else if(arrtexte.toArray().includes(captarpilha)) {
+        document.getElementById('mensagem').innerHTML = 'a palavra existe na pilha mas está no local errado'
+      } 
+      else {
+        document.getElementById('mensagem').innerHTML = 'palavra não existe na pilha ou foi escrita de forma errada'
+      }
+    }
+  //if() {}
 
-sortearMemoria()
-var imput = 1
-console.log(arrtexte)
-verificarTopo()
-console.log(arrtexte)
-console.log(arrtexte)
+//sortearMemoria()
+//var imput = 1
 
 //console.log(arrtexte.size())
 //console.log(arrtexte.toArray()[arrtexte.size() - 1])
