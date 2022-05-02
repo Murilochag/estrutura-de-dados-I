@@ -1,4 +1,5 @@
-export default class Queue {
+//export default 
+class Queue {
     constructor() {
       this.count = 0;
       this.lowestCount = 0;
@@ -40,6 +41,9 @@ export default class Queue {
     size() {
       return this.count - this.lowestCount;
     }
+    //toArray() {
+    //  return this.items;
+    //}
   
     toString() {
       if (this.isEmpty()) {
@@ -52,3 +56,17 @@ export default class Queue {
       return objString;
     }
   }
+
+  const fila1 = new Queue
+
+  fila1.enqueue(1)
+  console.log(fila1)
+
+  fila1.enqueue(2)
+  console.log(fila1)
+
+  fila1.enqueue(3)
+  console.log(fila1)
+
+  console.log(fila1.peek())
+  //console.log(fila1.toArray())
