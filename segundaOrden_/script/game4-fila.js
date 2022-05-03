@@ -47,7 +47,7 @@ class Queue {
       }
       let objString = `${this.items[this.lowestCount]}`;
       for (let i = this.lowestCount + 1; i < this.count; i++) {
-        objString = `${objString},${this.items[i]}`;
+        objString = `${objString} ← ${this.items[i]}`;
       }
       return objString;
     }
@@ -55,8 +55,8 @@ class Queue {
 
 ////////////////////////////////////////////////////////////
 
-const arrmemoria = ['a','b','c','d','e','f','g','h','i','j']
-const arrtexte = new Queue
+const arrmemoria = ['leia','luke','vader','rey','poe','finn','yoda','sabine','zeb','lando','solo','maul','hera']
+const fila1 = new Queue
 const pilha2 = new Queue
 
 function sorteio(tamanho) {
@@ -66,28 +66,30 @@ function enfileirarArr(obj) {
     return obj.toString()
 }
 function esconderPilha() {
-  document.getElementById('pilha').innerHTML = ''
+  document.getElementById('fila').innerHTML = ''
 }
 
 function sortearMemoria() {
-    arrtexte.clear()
+    fila1.clear()
     pilha2.clear()
     for(let i = 0; i < 5; i++) {
         j = sorteio(arrmemoria.length)
-        arrtexte.enqueue(arrmemoria[j])
+        fila1.enqueue(arrmemoria[j])
     }
-    document.getElementById('pilha').innerHTML = arrtexte.toString()
+    document.getElementById('fila').innerHTML = fila1.toString();
     }
 
 function verificarTopo() {
   esconderPilha()
   var captarpilha = document.getElementById('captarpilha').value
-  if(captarpilha === arrtexte.peek()){
-    arrtexte.dequeue()
+  if(captarpilha === fila1.peek()){
+    fila1.dequeue()
     pilha2.enqueue(captarpilha)
-    document.getElementById('pilha').innerHTML =
-    document.getElementById('mensagem').innerHTML = 'parabens'
-    document.getElementById("resultadoPilha").innerHTML = pilha2.toString()
+    document.getElementById('mensagem').innerHTML = 'parabéns'
+    document.getElementById("resultadofila").innerHTML = pilha2.toString()
+    }
+    else if (captarpilha.length <= 0 ) {
+      document.getElementById('mensagem').innerHTML = 'ops... você nao entrou com nehuma palavra'
     }
     else{
         document.getElementById('mensagem').innerHTML = 'ops.. tente outra palavra'

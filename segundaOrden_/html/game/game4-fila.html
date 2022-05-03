@@ -7,7 +7,7 @@
     <title>wiki</title>
 </head>
 <body>
-    <table border="2" width="90%" align="center">
+    <table border="0" width="90%" align="center">
 		
         <tr>
             <td height="100px">
@@ -21,15 +21,16 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <h1>teste</h1>
+                <h2>jogo da memória</h2>
+                <h3>(fila)</h3>
             </td>
         </tr>
 
         <tr>
             <td colspan="2" align="center">
-                <h1>fila</h1>
-                <h2 id="pilha">lll</h2>
-                <button type="submit" name="envia" onclick="sortearMemoria()">gerar pilha</button>
+                <br> <br>
+                <button type="submit" name="envia" onclick="sortearMemoria()">gerar fila</button>
+                <h2 id="fila">← ← ← ← ←</h2>
                 <br><br>
             </td>
         </tr>
@@ -44,14 +45,13 @@
 
         <tr>
             <td colspan="2" align="center">
-                <h1></h1>
-                <h1>montar fila</h1>
-                <h2 id="resultadoPilha">.....</h2>
+
+                <h2 id="resultadofila"></h2>
             </td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <h3 id="mensagem">mensagens aqui</h3>
+                <h3 id="mensagem">...</h3>
             </td>
         </tr>
  
@@ -59,4 +59,10 @@
      </table>
 </body>
 <script src="/segundaOrden_/script/game4-fila.js"></script>
+<style>
+    body {
+    font-family:'Courier New', Courier, monospace;
+    font-size : 120%;
+}
+</style>
 </html>
