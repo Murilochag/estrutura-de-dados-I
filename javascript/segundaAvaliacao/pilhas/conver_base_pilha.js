@@ -40,8 +40,8 @@ class Stack {
 
 const pilhaDecToBin = new Stack;
 
-function decTobin(numDec) {
-    let dec = numDec
+function decTobin(dec) {
+   // let dec = numDec
     let resto
     let bin = ''
 
@@ -58,4 +58,4 @@ function decTobin(numDec) {
     return console.log(bin)
 }
 
-decTobin(2)
+decTobin(10)
