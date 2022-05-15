@@ -205,23 +205,23 @@ class CircularLinkedList extends LinkedList {
 }
 
 // tstando lista circulares
-const lista2 = new CircularLinkedList; //criando a lista
+const listaCuriosidade = new CircularLinkedList; //criando a lista
 
 //inserindo elementos
-lista2.push(1)
-lista2.push(2)
-lista2.push(3)
-lista2.push(4)
+listaCuriosidade.push('1 <br>Yoda possui um número de dedos diferentes em alguns filmes. Enquantonos episódios V, VI e III ele possui 4 dedos, no episódio I ele só tinha 3 em  cadamão.')
+listaCuriosidade.push('2 <br>Muitas das construções feitas para gravar as cenas de Tatooine ainda estãoem pé na Tunísia. Algumas são habitadas, inclusive.')
+listaCuriosidade.push('3 <br>Luke Sky walker deveria se chamar Luke Starkiller.')
+listaCuriosidade.push('4 <br>A  linguagem  dos  jawas  foi  baseada  em  uma  versão  acelerada  dalinguagem Zulu, um dos idiomas oficiais da África do Sul.')
+listaCuriosidade.push('5 <br>A roupa usada por Bossk, o caçador de recompensas, já tinha sido usadaem Doctor Who.')
+listaCuriosidade.push('6 <br>A espécie de Yoda nunca foi nomeada.')
+listaCuriosidade.push('7 <br>A palavra “ewok” nunca foi dita em  voz alta nos filmes da série')
+listaCuriosidade.push('8 <br>“O Retorno de Jedi” quase foi chamado de “A Vingança de Jedi”.')
+listaCuriosidade.push('9 <br>O  comunicador  usado por Qui-Gon Jinn era,  na verdade, um  barbeadormodificado.')
 
-// imprimindo a pilha
-//let node = node.next
+console.log(listaCuriosidade.toString())
 
-//let current = this.head.next;
-//current = current.next;
 
-console.log(lista2.correrLista())
-console.log(lista2.correrLista())
-console.log(lista2.correrLista())
-console.log(lista2.correrLista())
-console.log(lista2.correrLista())
-console.log(lista2.correrLista())
+function imprimir() {
+    document.getElementById('curiosidade').innerHTML = listaCuriosidade.correrLista()
+
+}
