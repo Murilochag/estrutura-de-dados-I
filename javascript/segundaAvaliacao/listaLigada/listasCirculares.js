@@ -193,7 +193,7 @@ class CircularLinkedList extends LinkedList {
       if(this.contador === 0) {
         let b = `${this.head.element}`
         this.contador = 1
-        currenta = this.head.next
+        currenta = this.head
         return b
       }
       currenta = currenta.next

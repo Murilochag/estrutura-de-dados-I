@@ -123,3 +123,5 @@ lista1.push(4)
 
 // imprimindo a pilha
 console.log(lista1.toString())
+
+console.log(lista1.getElementAt(0).element)
