@@ -113,15 +113,42 @@ class LinkedList {
   }
 }
 
-const lista1 = new LinkedList; //criando a lista
+const resposta = new LinkedList; //criando a lista
 
 //inserindo elementos
-lista1.push(1)
-lista1.push(2)
-lista1.push(3)
-lista1.push(4)
+resposta.push('a new hope') // 0
+resposta.push('jango fett') // 1 
+resposta.push('kylo ren') // 2
+resposta.push('2') // 3
+resposta.push('grogu') // 4
 
-// imprimindo a pilha
-console.log(lista1.toString())
+//removendo com removeAt
+resposta.removeAt(2)
 
-console.log(lista1.getElementAt(0).element)
+// removendo com o remove
+resposta.remove('2')
+
+// inserindo com o insert
+resposta.insert('kylo ren', 2)
+resposta.insert('2', 3)
+
+
+// imprimindo a a listo ou elemntos usando o toString e o getElementAt
+console.log(resposta.toString())
+
+console.log(resposta.getElementAt(2).element)
+
+//indexOf que retorna o index do elemnto:
+resposta.indexOf('grogu')
+
+// verificando se a lista está vazia
+resposta.isEmpty()
+
+// verificando o tamanho da nossa lista resposta
+resposta.size()
+
+// pegando a cabeça (primeiro elemento da lista)
+resposta.getHead()
+
+// limpando a lista respostas
+//resposta.clear()
