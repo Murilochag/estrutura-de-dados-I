@@ -218,8 +218,6 @@ listaCuriosidade.push('7 <br>A palavra “ewok” nunca foi dita em  voz alta no
 listaCuriosidade.push('8 <br>“O Retorno de Jedi” quase foi chamado de “A Vingança de Jedi”.')
 listaCuriosidade.push('9 <br>O  comunicador  usado por Qui-Gon Jinn era,  na verdade, um  barbeadormodificado.')
 
-console.log(listaCuriosidade.toString())
-
 
 function imprimir() {
     document.getElementById('curiosidade').innerHTML = listaCuriosidade.correrLista()

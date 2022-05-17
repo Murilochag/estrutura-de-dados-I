@@ -156,7 +156,7 @@ class SortedLinkedList extends LinkedList {
       for (; i < this.size() && current; i++) {
         const comp = this.compareFn(element, current.element);
         if (comp === Compare.LESS_THAN) {
-          return i - 1; // mudei aqui
+          return i ;
         }
         current = current.next;
       }

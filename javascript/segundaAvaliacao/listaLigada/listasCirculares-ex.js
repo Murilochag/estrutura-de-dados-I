@@ -1,3 +1,4 @@
+var currenta
 function defaultEquals(a, b) {
     return a === b;
   }
@@ -206,9 +207,15 @@ listaCircular.push('1 - Yoda possui um número de dedos diferentes em alguns fil
 listaCircular.push('2 - Luke Sky walker deveria se chamar Luke Starkiller.')
 listaCircular.push('3 - Muitas das construções feitas para gravar as cenas de Tatooine ainda estãoem pé na Tunísia. Algumas são habitadas, inclusive.')
 
-//removendo elementos por index
-listaCircular.removeAt(1)
 
-//inserindo o elemento que retiramos pelo index
-listaCircular.insert('2 - Luke Sky walker deveria se chamar Luke Starkiller.',1)
+//removendo elementos por index listaCircular.removeAt(1)
+
+
+//inserindo o elemento que retiramos pelo index listaCircular.insert('2 - Luke Sky walker deveria se chamar Luke Starkiller.',1)
+
+console.log(listaCircular.correrLista())
+console.log(listaCircular.correrLista())
+console.log(listaCircular.correrLista())
+console.log(listaCircular.correrLista())
+console.log(listaCircular.correrLista())
 

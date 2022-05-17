@@ -151,4 +151,4 @@ resposta.size()
 resposta.getHead()
 
 // limpando a lista respostas
-//resposta.clear()
+resposta.clear()
