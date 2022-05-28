@@ -1,7 +1,27 @@
-import { defaultToString } from '../util';
-import { ValuePair } from './models/value-pair';
 
-export default class Dictionary {
+
+function defaultToString(item) {
+  if (item === null) {
+    return 'NULL';
+  } else if (item === undefined) {
+    return 'UNDEFINED';
+  } else if (typeof item === 'string' || item instanceof String) {
+    return `${item}`;
+  }
+  return item.toString();
+}
+
+class ValuePair {
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
+  toString() {
+    return `[#${this.key}: ${this.value}]`;
+  }
+}
+
+class Dictionary {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {};
@@ -67,3 +87,9 @@ export default class Dictionary {
     return objString;
   }
 }
+
+const mapa1 = new Dictionary;
+
+mapa1.set('murilo', 'chagas')
+
+console.log(mapa1.toString())
