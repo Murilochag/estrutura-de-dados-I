@@ -106,7 +106,11 @@ function defaultToString(item) {
     if (dictsw.hasKey(termo)) {
         document.getElementById('termo').innerHTML = termo
         document.getElementById('sig').innerHTML = dictsw.get(termo)
-    } else {
+    }
+    else if (dictsw.isEmpty()) {
+      document.getElementById('termo').innerHTML = 'erro!!! dicionário vazio'
+    }
+    else {
         document.getElementById('termo').innerHTML = ' '
         document.getElementById('sig').innerHTML = 'desculpe, não conseguimos encontrar uma definição para o termo <i>"' + termo +'"</i>';
     }

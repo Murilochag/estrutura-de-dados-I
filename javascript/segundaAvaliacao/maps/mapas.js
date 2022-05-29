@@ -82,14 +82,18 @@ class Dictionary {
     const valuePairs = this.keyValues();
     let objString = `${valuePairs[0].toString()}`;
     for (let i = 1; i < valuePairs.length; i++) {
-      objString = `${objString},${valuePairs[i].toString()}`;
+      objString = `${objString}\n${valuePairs[i].toString()}`;
     }
     return objString;
   }
 }
 
-const mapa1 = new Dictionary;
+const dictsw = new Dictionary;
 
-mapa1.set('murilo', 'chagas')
 
-console.log(mapa1.toString())
+dictsw.set('força','A Força é o campo de energia que rege o universo e dá poderes a todos. O lado bom da Força está relacionado aos Jedis e preza pela liberdade de cada um. Já o lado sombrio é relacionado aos Siths e tem como objetivo impor um sistema de ditadura ao controlar toda a galáxia.')
+dictsw.set('jedi','Os Jedis são cavaleiros que possuem poder especial para combater o mal do universo a fim de restaurar a ordem. Obi-Wan Kenobi é um dos principais Jedis de toda a franquia Star Wars.')
+dictsw.set('padawan','Padawans são os aprendizes Jedi, sendo treinados por um Cavaleiro ou por um Mestre Jedi até ser graduado Cavaleiro Jedi. São conhecidos como "Aprendizes", ou "Alunos Padawan".')
+
+
+console.log(dictsw.toString())
