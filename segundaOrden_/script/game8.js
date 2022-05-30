@@ -94,34 +94,65 @@ class Set {
 //////////////////////////////////////////////////////
 
 const resposta = new Set
-resposta.add('1')
+resposta.add('a')
+resposta.add('b')
+resposta.add('f')
+resposta.add('g')
+resposta.add('h')
+
 
 const ladosobrio = new Set
 ladosobrio.add('a')
-ladosobrio.add('a')
-ladosobrio.add('a')
-ladosobrio.add('a')
-ladosobrio.add('a')
+ladosobrio.add('b')
+ladosobrio.add('c')
+ladosobrio.add('d')
+ladosobrio.add('e')
 
 const ladobom = new Set
-ladobom.add('b')
-ladobom.add('b')
-ladobom.add('b')
-ladobom.add('b')
-ladobom.add('b')
+ladobom.add('f')
+ladobom.add('g')
+ladobom.add('h')
+ladobom.add('i')
+ladobom.add('j')
 
 
 
 function testarResp() {
+
+  resposta.clear()
+
+  var resp1 = document.getElementById('resp1').value
+  var resp2 = document.getElementById('resp2').value
+  var resp3 = document.getElementById('resp3').value
+  var resp4 = document.getElementById('resp4').value
+  var resp5 = document.getElementById('resp5').value
+
+  resposta.add(resp1)
+  resposta.add(resp2)
+  resposta.add(resp3)
+  resposta.add(resp4)
+  resposta.add(resp5)
+
     if (resposta.isEmpty()) {
 
-        //escrever no html aqui pedindo para inserir respopstaas 
+      document.getElementById('mensagem').innerHTML = 'você não entrou com nehuma resposta!' 
 
      }
-     else if(resposta.size() >= 4) {
-         //
+     else if(resposta.size() < 5) {
+      document.getElementById('mensagem').innerHTML = 'ops! você pode ter esquecido de uma ou mais respostas!' 
      }
      else {
-         console.log('cheio')
+        //resultado
+        let mau = resposta.intersection(ladosobrio).values().length
+        mau = (mau * 100) / ladobom.size()
+
+        let bom = resposta.intersection(ladobom).values().length
+        bom = (bom * 100) / ladobom.size()
+
+
+        var resultado = `você é ${mau}% lado sombrio e ${bom}% lado bom da força!`
+        document.getElementById('mensagem').innerHTML = resultado
         }
 }
+
+//console.log(resposta.intersection(ladosobrio).values()[0])
